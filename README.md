@@ -1,3 +1,7 @@
+# Fork-Free-My-TV
+
+Versão pessoal de [Free My TV](https://github.com/simbasjungles/free-my-tv), com correção do atalho da Netflix para a Samsung UN50NU7100. Preparada para futuras personalizações visuais; veja [PERSONALIZACAO.md](PERSONALIZACAO.md).
+
 <div align="center">
 
 <img src="docs/assets/icon-512.png" width="96" alt="">

@@ -198,6 +198,12 @@ var TV = (function () {
   }
 
   function samsungLaunch(id, done) {
+    // On the NU7100 the store's Netflix opens a black screen; the native entry works.
+    if (/\.Netflix$/.test(id)) {
+      try {
+        if (window.tizen.application.getAppInfo('org.tizen.netflix-app')) id = 'org.tizen.netflix-app';
+      } catch (e) {} // TVs without the native entry keep their store app.
+    }
     try {
       window.tizen.application.launch(id, function () { if (done) done(true); }, function () { if (done) done(false); });
     } catch (e) {
