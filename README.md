@@ -1,6 +1,19 @@
-# Fork-Free-My-TV
+# Robert Tv
 
-Versão pessoal de [Free My TV](https://github.com/simbasjungles/free-my-tv), com correção do atalho da Netflix para a Samsung UN50NU7100. Preparada para futuras personalizações visuais; veja [PERSONALIZACAO.md](PERSONALIZACAO.md).
+Versão pessoal de [Free My TV](https://github.com/simbasjungles/free-my-tv), com marca própria e ajustes para a Samsung UN50NU7100. Veja [PERSONALIZACAO.md](PERSONALIZACAO.md) e a [marca vetorial](branding/robert-tv.svg). O projeto original permanece creditado abaixo.
+
+Esta versão inclui logo que acompanha o tema, modo minimalista opcional,
+atalhos para os aplicativos nativos da Samsung e ícones locais dos serviços.
+O app continua sendo removível e não substitui o Home do sistema.
+
+**Controle para Android:** [RobertTv-Controle](https://github.com/robertlindomar/RobertTv-Controle).
+O controle é um aplicativo separado para o celular, com reconexão automática,
+teclado numérico e atalhos para os aplicativos da TV.
+
+Configurações pessoais, chaves de API, certificados e pacotes assinados ficam
+fora do Git. Para compilar sua versão, use `config.example.properties` como
+referência e mantenha suas credenciais apenas no arquivo local.
+
 
 <div align="center">
 

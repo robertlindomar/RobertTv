@@ -66,7 +66,8 @@ def build(preview, config, profile):
     app_id = re.search(r'<tizen:application id="([^"]+)"', manifest).group(1)
     version = re.search(r'<widget [^>]*version="([^"]+)"', manifest).group(1)
     app = webapp.files(config, 'tizen/build.py')
-    for name in ('config.xml', 'icon.png'):
+    icon = re.search(r'<icon\s+src="([^"]+)"', manifest).group(1)
+    for name in ('config.xml', icon):
         with open(os.path.join(ROOT, 'tizen', name), 'rb') as f:
             app[name] = f.read()
 

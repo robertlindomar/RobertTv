@@ -11,7 +11,7 @@ function launch(id, native, fails) {
     window: { tizen: { application: {
       getCurrentApplication: () => ({ appInfo: { id: 'FreeMyTVio.FreeMyTV' } }),
       getAppInfo: app => {
-        assert.equal(app, 'org.tizen.netflix-app');
+        assert.ok(['org.tizen.netflix-app', 'com.samsung.tv.cobalt-yt'].indexOf(app) >= 0);
         if (!native) throw new Error('NotFoundError');
         return { id: app };
       },
@@ -38,4 +38,16 @@ assert.deepEqual(launch('YouTube.app', true), { opened: ['YouTube.app'], result:
 assert.deepEqual(launch('RN1MCdNq8t.Netflix', true, true), {
   opened: ['org.tizen.netflix-app'], result: false
 });
-console.log('Samsung Netflix: 5 cenários passaram.');
+assert.deepEqual(launch('9Ur5IzDKqV.TizenYouTube', true), {
+  opened: ['com.samsung.tv.cobalt-yt'], result: true
+});
+assert.deepEqual(launch('9Ur5IzDKqV.TizenYouTube', false), {
+  opened: ['9Ur5IzDKqV.TizenYouTube'], result: true
+});
+assert.deepEqual(launch('com.samsung.tv.cobalt-yt', true), {
+  opened: ['com.samsung.tv.cobalt-yt'], result: true
+});
+assert.deepEqual(launch('5SLwh7m3En.TizenYouTubeKids', true), {
+  opened: ['5SLwh7m3En.TizenYouTubeKids'], result: true
+});
+console.log('Samsung Netflix e YouTube: 9 cenários passaram.');

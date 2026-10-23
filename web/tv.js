@@ -96,15 +96,19 @@ var TV = (function () {
       'built-in-app-info-viewer|commonsearch|searchall|preview-|tv-scheduler|csfs|notification-app|mycontents|' +
       'safLaunchBridge|shortcut|remote-workspace|voiceassistant|mybixby|weather-viewer))');
 
-  // Samsung apps whose iconPath is Tizen's generic pinwheel (a valid image, so onerror never fires): our own icons.
+  // Local logos replace generic placeholders and square app icons that look tiny inside shelf cards.
   // Seen on a 2018 NU7675 (Tizen 4); Smart Hub draws their real icons from a folder apps can't read. On a 2017
   // MU6100 (Tizen 3) no iconPath loads at all, so common apps get a logo here: Simple Icons' (CC0), cropped and tinted
-  // for the tiles, with a width and height so old WebKit sizes them like PNGs.
+  // for the tiles, with a width and height so old WebKit sizes them like PNGs. Additional wordmarks: ASSET-CREDITS.md.
   var SAMSUNG_ICONS = {
     '9Ur5IzDKqV.TizenYouTube': 'icons/youtube.png',
     'evKhCgZelL.AmazonIgnitionLauncher2': 'icons/prime.png',
     'RN1MCdNq8t.Netflix': 'icons/netflix.svg',
     'org.tizen.netflix-app': 'icons/netflix.svg',
+    'MCmYXNxgcu.DisneyPlus': 'icons/disneyplus.svg',
+    '5b8c3eb16b.BeamCTVDev': 'icons/hbomax.svg',
+    'rJyOSqC6Up.PPlusIntl': 'icons/paramountplus.svg',
+    'EUJSYi9GRg.globo': 'icons/globoplay.svg',
     'NvZ26VG9Yw.HBOGOLAG': 'icons/max.svg',
     'rJeHak5zRg.Spotify': 'icons/spotify.svg',
     'cexr1qp97S.Deezer': 'icons/deezer.svg',
@@ -199,9 +203,12 @@ var TV = (function () {
 
   function samsungLaunch(id, done) {
     // On the NU7100 the store's Netflix opens a black screen; the native entry works.
-    if (/\.Netflix$/.test(id)) {
+    // The native YouTube entry also keeps the account used by Samsung's launcher.
+    var nativeId = /\.Netflix$/.test(id) ? 'org.tizen.netflix-app' :
+        (id === '9Ur5IzDKqV.TizenYouTube' ? 'com.samsung.tv.cobalt-yt' : null);
+    if (nativeId) {
       try {
-        if (window.tizen.application.getAppInfo('org.tizen.netflix-app')) id = 'org.tizen.netflix-app';
+        if (window.tizen.application.getAppInfo(nativeId)) id = nativeId;
       } catch (e) {} // TVs without the native entry keep their store app.
     }
     try {

@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="https://freemytv.io/tizen" version="1.1.0" viewmodes="maximized">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="https://freemytv.io/tizen" version="1.1.10" viewmodes="maximized">
     <tizen:application id="FreeMyTVio.FreeMyTV" package="FreeMyTVio" required_version="3.0"/>
-    <name>Free My TV</name>
+    <name>Robert Tv</name>
     <author href="https://freemytv.io">Free My TV</author>
-    <description>A fast, ad-free home screen.</description>
+    <description>Robert Tv — sua TV, do seu jeito.</description>
     <content src="index.html"/>
-    <icon src="icon.png"/>
+    <tizen:app-control>
+        <tizen:src name="index.html" reload="disable"/>
+        <tizen:operation name="http://tizen.org/appcontrol/operation/default"/>
+    </tizen:app-control>
+    <icon src="robert-tv.png"/>
     <feature name="http://tizen.org/feature/screen.size.all"/>
     <access origin="*" subdomains="true"/>
     <tizen:privilege name="http://tizen.org/privilege/internet"/>

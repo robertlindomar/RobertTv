@@ -25,7 +25,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WGT = os.path.join(ROOT, 'FreeMyTV-tizen.wgt')
 PORT = 26101
 MAX_DATA = 4096   # what this side announces; sdbd keeps each packet within both sides' maximum
-ON_TV = 'Apps, Settings, Free My TV, Delete'   # removing it on the TV itself
+ON_TV = 'Apps, Settings, Robert Tv, Delete'   # removing it on the TV itself
 
 
 class Sdb:
@@ -187,13 +187,13 @@ def main():
     if not re.search(r'install completed', out):
         hint = ''
         if 'different certificate' in out:
-            hint = ('\nThe Free My TV on the TV was signed with another certificate, and the TV only updates it with the '
+            hint = ('\nThe Robert Tv on the TV was signed with another certificate, and the TV only updates it with the '
                     'same one. Remove it on the TV (' + ON_TV + '), then run this again.')
         sys.exit('The TV didn\'t finish installing. It said:\n' + out.strip() + hint)
     sdb.shell('0 was_execute ' + app_id, r'launched|spend time', 20)
     print('Installed and open on the TV.')
     print('Tip: turn on Autorun Last App in the TV\'s settings (General, Smart Features; where it is changes by year) '
-          'and the TV turns on into Free My TV.')
+          'to test whether this TV can resume Robert Tv. Automatic startup is not confirmed on this model.')
 
 
 if __name__ == '__main__':

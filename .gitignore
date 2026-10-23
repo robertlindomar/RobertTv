@@ -13,3 +13,11 @@ __pycache__/
 # macOS
 .DS_Store
 tools/.i18n-cache.json
+
+# Private signing material and local pairing data
+*.p12
+*.jks
+*.pem
+*.key
+*.pfx
+*.pwd

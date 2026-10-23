@@ -1,0 +1,10 @@
+ROBERT TV — LOGO VETORIAL
+
+Robert_TV_claro.svg : para fundo claro (nome Robert escuro)
+Robert_TV_escuro.svg : para fundo escuro (nome Robert branco)
+
+Todos os SVGs possuem fundo transparente, gradientes e caminhos vetoriais reais.
+Texto convertido em curvas: nao requer instalacao de fonte para abrir.
+Arquivos PNG incluidos somente para visualizacao e aplicacoes raster.
+
+Produzido a partir da imagem de referencia. Recriacao vetorial, nao arquivo fonte original.

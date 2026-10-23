@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 360 360"><title>Robert TV - simbolo</title><defs>
+<!-- Gradientes vetoriais do simbolo (nenhuma imagem incorporada) -->
+<linearGradient id="gradBack" x1="485" y1="157" x2="518" y2="477" gradientUnits="userSpaceOnUse">
+ <stop stop-color="#80EDFF"/><stop offset=".40" stop-color="#50B9F9"/><stop offset=".78" stop-color="#5864F3"/><stop offset="1" stop-color="#704BE9"/>
+</linearGradient>
+<linearGradient id="gradBottom" x1="154" y1="418" x2="319" y2="634" gradientUnits="userSpaceOnUse">
+ <stop stop-color="#FE76AC"/><stop offset=".27" stop-color="#FF97AD"/><stop offset=".64" stop-color="#FFBAC0"/><stop offset="1" stop-color="#FFE9B4"/>
+</linearGradient>
+<linearGradient id="gradTop" x1="150" y1="0" x2="377" y2="363" gradientUnits="userSpaceOnUse">
+ <stop stop-color="#72F4FF"/><stop offset=".22" stop-color="#28B9FA"/><stop offset=".56" stop-color="#206DFD"/><stop offset=".80" stop-color="#2839D9"/><stop offset="1" stop-color="#5442F7"/>
+</linearGradient>
+<linearGradient id="gradFront" x1="8" y1="135" x2="442" y2="585" gradientUnits="userSpaceOnUse">
+ <stop stop-color="#7DF3FF"/><stop offset=".25" stop-color="#56D1F9"/><stop offset=".49" stop-color="#789CF7"/><stop offset=".72" stop-color="#CF9CF9"/><stop offset=".84" stop-color="#FDBBCF"/><stop offset="1" stop-color="#8E82FA"/>
+</linearGradient>
+<linearGradient id="gradTv" x1="0" y1="0" x2="2880" y2="0" gradientUnits="userSpaceOnUse">
+ <stop stop-color="#6CD9F8"/><stop offset=".23" stop-color="#8CAAFB"/><stop offset=".51" stop-color="#BA93FB"/><stop offset=".73" stop-color="#EAA0DE"/><stop offset="1" stop-color="#FFC39B"/>
+</linearGradient>
+</defs>
+<g id="simbolo-robert-tv" transform="translate(16 18) scale(.51)">
+  <path id="camada-tras" fill="url(#gradBack)" d="M 474,148 C 536,171 593,236 607,303 C 627,385 591,428 531,461 L 475,481 C 412,445 359,412 301,381 C 386,360 458,326 495,276 C 526,231 521,185 474,148 Z"/>
+  <path id="camada-inferior" fill="url(#gradBottom)" d="M 302,380 C 234,397 162,432 122,488 C 85,537 85,602 126,630 C 153,650 206,628 240,609 L 477,477 C 422,444 369,410 302,380 Z"/>
+  <path id="camada-superior" fill="url(#gradTop)" d="M 32,95 C 36,56 59,21 97,5 C 127,-9 160,7 201,29 L 486,158 C 516,172 530,204 523,241 C 516,295 449,353 302,382 C 358,362 397,344 406,310 C 419,265 386,231 338,201 C 239,143 135,105 32,95 Z"/>
+  <path id="camada-frontal" fill="url(#gradFront)" d="M 32,95 C 192,113 322,171 382,231 C 408,257 417,282 406,312 C 391,350 349,364 284,381 C 208,401 143,442 111,498 C 79,553 85,607 126,631 C 62,619 31,569 31,511 L 31,132 Z"/>
+  <!-- Discretas separacoes luminosas vistas no simbolo de referencia -->
+  <path d="M 32,95 C 192,113 322,171 382,231 C 408,257 417,282 406,312 C 391,350 349,364 284,381" fill="none" stroke="#E6FAFF" stroke-width="3.3" stroke-opacity=".9" />
+  <path d="M 301,381 C 223,396 156,433 118,493 C 89,542 88,600 126,631" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-opacity=".82"/>
+</g>
+</svg>
